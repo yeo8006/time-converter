@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시간 변환기</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">시간 변환기</h1>
+        
+        <div id="current-time">
+            <div><strong>현지 시간</strong></div>
+            <div id="current-datetime"></div>
+            <div class="current-time-blocks">
+                <div class="current-time-block">
+                    <div class="utc-label">
+                        <strong>UTC</strong>
+                    </div>
+                    <div id="current-utctime"></div>
+                </div>
+
+                <div class="current-time-block">
+                    <div><strong>FILETIME</strong></div>
+                    <div id="current-filetime"></div>
+                </div>
+
+                <div class="current-time-block">
+                    <div><strong>UNIX 시간</strong></div>
+                    <div id="current-unixtime"></div>
+                </div>
+            </div>
+            <div class="current-time-block">
+              <div class="time-zone-label">
+                  <strong>Time Zone</strong>
+                  <select id="timezone">
+                      <option value="14">+14</option>
+                      <option value="13">+13</option>
+                      <option value="12">+12</option>
+                      <option value="11">+11</option>
+                      <option value="10">+10</option>
+                      <option value="9">+9</option>
+                      <option value="8">+8</option>
+                      <option value="7">+7</option>
+                      <option value="6">+6</option>
+                      <option value="5">+5</option>
+                      <option value="4">+4</option>
+                      <option value="3">+3</option>
+                      <option value="2">+2</option>
+                      <option value="1">+1</option>
+                      <option value="0" selected>+0</option>
+                      <option value="-1">-1</option>
+                      <option value="-2">-2</option>
+                      <option value="-3">-3</option>
+                      <option value="-4">-4</option>
+                      <option value="-5">-5</option>
+                      <option value="-6">-6</option>
+                      <option value="-7">-7</option>
+                      <option value="-8">-8</option>
+                      <option value="-9">-9</option>
+                      <option value="-10">-10</option>
+                      <option value="-11">-11</option>
+                      <option value="-12">-12</option>
+                  </select>
+              </div>
+              <div id="current-zonetime"></div>
+          </div>
+        </div>
+
+        <div class="conversion-section">
+            <div class="conversion-header">
+                <div class="conversion-title">시간 변환</div>
+                <div class="time-colors">
+                    <div class="time-color-item utc-time-color">UTC</div>
+                    <div class="time-color-item file-time-color">FILETIME</div>
+                    <div class="time-color-item unix-time-color">UNIX Time</div>
+                </div>
+            </div>
+
+            <div class="conversion-item">
+                <div class="input-container">
+                    <label for="input-datetime">날짜/시간</label>
+                    <input type="datetime-local" id="input-datetime">
+                </div>
+                <div class="output-container">
+                    <div class="output-time datetime-to-utctime utc-time-color"></div>
+                    <div class="output-time datetime-to-filetime file-time-color"></div>
+                    <div class="output-time datetime-to-unixtime unix-time-color"></div>
+                </div>
+            </div>
+
+            <div class="conversion-item">
+                <div class="input-container">
+                    <label for="input-filetime">File Time</label>
+                    <input type="number" id="input-filetime" value="0">
+                </div>
+                <div class="output-container">
+                    <div class="output-time filetime-to-utctime utc-time-color"></div>
+                    <div class="output-time filetime-to-unixtime unix-time-color"></div>
+                </div>
+            </div>
+
+            <div class="conversion-item">
+                <div class="input-container">
+                    <label for="input-unixtime">UNIX Time</label>
+                    <input type="number" id="input-unixtime" value="0">
+                </div>
+                <div class="output-container">
+                    <div class="output-time unixtime-to-utctime utc-time-color" class="output-item"></div>
+                    <div class="output-time unixtime-to-filetime file-time-color" class="output-item"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

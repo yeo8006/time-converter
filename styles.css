@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    min-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#title {
+    text-align: center;
+}
+
+.current-time-blocks {
+    display: flex;
+    margin-top: 10px;
+}
+
+.current-time-block {
+    display:flex;
+    flex-direction: column;
+    width: 250px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+}
+
+.current-time-block div:first-child {
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.time-zone-label {
+    display: flex;
+    align-items: center;
+}
+
+.time-zone-label > select {
+    width: 50px;
+    margin-left: 10px;
+}
+
+.conversion-section {
+    margin-top: 30px;
+}
+.conversion-header {
+    display: flex;
+}
+.conversion-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.time-colors {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 10px;
+}
+.time-color-item {
+    padding: 5px 7px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    font-size: 10px;
+    font-weight: bold;
+}
+.utc-time-color { 
+    background-color: #7dbf7f; 
+}
+.file-time-color { 
+    background-color: #97c8ef; 
+}
+.unix-time-color { 
+    background-color: #f89d82; 
+}
+
+.conversion-item {
+    background-color: whitesmoke;
+    padding: 10px;
+    margin-top: 20px;
+}
+.conversion-item label {
+    display: block;
+    font-weight: bold;
+}
+.conversion-item input {
+    margin-top: 5px;
+}
+.output-container {
+    display: flex;
+    margin-top: 10px;
+}
+.output-time {
+    border-radius: 7px;
+    margin-right: 5px;
+    padding: 5px 12px;
+}
